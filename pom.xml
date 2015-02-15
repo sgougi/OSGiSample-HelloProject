@@ -9,5 +9,20 @@
   <modules>
     <module>com.wingnest.bundles.sample.hello.service</module>
     <module>com.wingnest.bundles.sample.hello.command</module>
+    <module>com.wingnest.bundles.sample.hello.service_spec</module>
   </modules>
+  
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <inherited>true</inherited>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+            </plugins>
+    </build>  
 </project>

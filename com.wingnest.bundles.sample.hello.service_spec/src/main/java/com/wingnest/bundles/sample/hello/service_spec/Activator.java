@@ -14,33 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wingnest.bundles.sample.hello.service;
+package com.wingnest.bundles.sample.hello.service_spec;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceRegistration;
-
-import com.wingnest.bundles.sample.hello.service_spec.Hello;
 
 public class Activator implements BundleActivator {
-
-	private ServiceRegistration<Hello> registration;
 	 
     public void start(BundleContext context) {
-        System.out.println("Starting the bundle!!!");
-        registration = context.registerService(Hello.class, new HelloImpl(), null);
+        System.out.println("Starting the bundle");
     }
 
     public void stop(BundleContext context) {
-        System.out.println("Stopping the bundle!!!");
-        registration.unregister();
+        System.out.println("Stopping the bundle");
     }
 
-    public static class HelloImpl implements Hello {
-
-		public String hello() {
-			return "hello";
-		}
-  	
-    }
 }
